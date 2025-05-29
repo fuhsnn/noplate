@@ -7,14 +7,7 @@
 #include "core.h"
 
 #define array(T, N) typeof(typeof(T)[N])
-#define array_lengthof(x) 					\
-(sizeof *({ 							\
-	auto __x = &(x);					\
-	(void)TYPE_CHECK(typeof((*__x)[0])(*)[], __x);		\
-	char (*__tmp)[(sizeof(*__x) / sizeof((*__x)[0]))] = 0;	\
-	__tmp;							\
-}))
-	
+#define array_lengthof(x) _Countof(x)
 
 #define array_slice(x, start, end)				\
 (*({								\
