@@ -25,14 +25,6 @@
 #define _CONCAT1(A, B) A ## B
 #define CONCAT(A, B) _CONCAT1(A, B)
 
-#ifndef auto
-#define auto __auto_type
-#endif
-
-#ifndef typeof
-#define typeof(X) __typeof(X)
-#endif
-
 #define compound_literal(T, x)  (struct { T data; }){ x }.data
 
 #define _Ptr(x) typeof(typeof(x)*)
