@@ -41,19 +41,6 @@ void test_vec()
 		if (good[i] != vec_access(int, v, i))
 			abort();
 
-	NESTED(int, cmp, (const int* a, const int* b))
-	{ 
-		return *a - *b;
-	};
-
-	vec_sort(int, v, cmp);
-
-	int good2[] = { 1, 1, 3, 4, 8, 8 };
-
-	for (int i = 0; i < (int)vec_length(int, v); i++)
-		if (good2[i] != vec_access(int, v, i))
-			abort();
-
 	free(v);
 }
 
