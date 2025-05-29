@@ -13,11 +13,7 @@
 #define GCC_VERSION (__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__)
 #endif
 
-#if __STDC_VERSION__ >= 202000
-#if (GCC_VERSION >= 140000) || (__clang_major__ > 20)
 #define TAGCOMPAT
-#endif
-#endif
 
 #if (GCC_VERSION >= 150000) && !defined __clang__
 #define COUNTED_BY(N) gnu::counted_by(N)
