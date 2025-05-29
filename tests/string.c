@@ -27,7 +27,10 @@ void test_string()
 	for (int i = 0; i < (int)vec_length(int, s); i++)
 		string_append(&ss, vec_access(string_ptr, s, vec_length(int, s) - 1 - i));
 
-	if (vec_length(string_ptr, s) != array_lengthof(vec2array(string_ptr, s)))
+	if (vec_length(string_ptr, s) != 2)
+		abort();
+
+	if (strcmp(string_cstr(ss), "Hallo Du!"))
 		abort();
 
 	free(ss);
