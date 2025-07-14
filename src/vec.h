@@ -115,7 +115,7 @@ inline ssize_t vec_capacity_auto(ssize_t x)
 #define vec_alloc(T) (vec_alloc_n(T, 0))
 
 
-#if (GCC_VERSION >= 110300) || defined __clang__
+#if 1
 #define vec2array(T, x) \
 (*({									\
 	auto _x = (x);							\

@@ -5,7 +5,7 @@
 
 #include "vec.h"
 
-#if (GCC_VERSION < 110300) && !defined __clang__
+#if 0
 _Thread_local struct vec_a vec_array_tmp = { 0 };
 #endif
 
